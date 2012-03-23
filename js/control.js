@@ -48,7 +48,7 @@ control = {
 
     if (doThisSection !== null) {
       $('#currentaction h1').html('Fetching section value');
-      $('#currentaction h4').html(doThisSection.webTitle + ': ' + (done+1) + '/' + (needToDo + done));
+      $('#currentaction h4').html((done+1) + '/' + (needToDo + done) + ' : ' + doThisSection.webTitle);
 
       $.getJSON("http://content.guardianapis.com/search?section=" + doThisSection.id + "&page-size=1&format=json&date-id=date%2Flast24hours&callback=?",
         //  TODO: add error checking to this response
