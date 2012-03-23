@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Last 24 hours by section</title>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+    <link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css?v=1.2">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div id=currentaction class=hero-unit>
+                <h1>Last 24 hours by section</h1>
+                <h4></h4>
+            </div>
+
+            <div id=results class="row">
+                <div id="table" class='span6 offset3 hidden'>
+                </div>
+            </div>
+
+
+            <div id=moreresults class="row">
+              <div id="pie" class='span12 hidden'>
+                <div id="default" class="graph">
+                </div>
+              </div>
+            </div>
+
+
+            <footer>
+                <p>&copy; the guardian 2012</p>
+            </footer>
+        
+        </div>
+                            </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/control.js?v=1.2"></script>
+    <script>
+        $(document).ready(function() {
+            control.init();
+        });
+    </script>
+</body>
+</html>
