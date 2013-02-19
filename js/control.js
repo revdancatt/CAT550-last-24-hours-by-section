@@ -18,8 +18,12 @@ control = {
       function(json) {
 
         for (var i in json.response.results) {
-          control.sections.push(json.response.results[i].id);
-          control.sectionsJSON[json.response.results[i].id] = {'id': json.response.results[i].id, 'done': false, 'score': 0, 'webTitle': json.response.results[i].webTitle};
+          try {
+            control.sections.push(json.response.results[i].id);
+            control.sectionsJSON[json.response.results[i].id] = {'id': json.response.results[i].id, 'done': false, 'score': 0, 'webTitle': json.response.results[i].webTitle};
+          } catch(er) {
+            // do nowt
+          }
         }
 
         control.getValues();
