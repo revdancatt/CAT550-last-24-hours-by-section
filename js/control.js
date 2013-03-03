@@ -57,7 +57,7 @@ control = {
           control.sectionsJSON[doThisSection.id].done = true;
           control.sectionsJSON[doThisSection.id].score = json.response.total;
           control.total+=json.response.total;
-          control.getValues();
+          setTimeout(function() {control.getValues();}, 150);
         }
       );
     } else {
